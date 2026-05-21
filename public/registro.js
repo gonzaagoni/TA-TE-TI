@@ -2,6 +2,10 @@
 .getElementById("entrar")
 .onclick = async ()=>{
 
+  alert("click funciona")
+  window.location.href = "torneo.html"
+  return
+
 const instagram =
 document
 .getElementById("instagram")
