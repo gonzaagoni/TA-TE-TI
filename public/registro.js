@@ -2,10 +2,6 @@
 .getElementById("entrar")
 .onclick = async ()=>{
 
-  alert("click funciona")
-  window.location.href = "torneo.html"
-  return
-
 const instagram =
 document
 .getElementById("instagram")
@@ -27,11 +23,6 @@ document
 return
 
 }
-
-
-// =======================
-// UBICACION
-// =======================
 
 navigator
 .geolocation
@@ -64,8 +55,15 @@ pos.coords.longitude
 window.location.href =
 "torneo.html"
 
-}
-
+},
+()=>{
+  
+  document
+.getElementById("estado")
+.innerText =
+"Ingresá un Instagram válido"
+  
+  }
 )
 
 }
