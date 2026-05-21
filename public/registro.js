@@ -37,7 +37,7 @@ navigator
 .geolocation
 .getCurrentPosition(
 
-(pos)=>{
+async(pos)=>{
 
 await fetch("/registro",{
 
