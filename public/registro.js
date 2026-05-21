@@ -1,14 +1,13 @@
 ﻿document
 .getElementById("entrar")
-.onclick = ()=>{
+.onclick = async ()=>{
 
 const instagram =
 document
 .getElementById("instagram")
 .value
 
-
-if(
+  if(
 
 instagram == "" ||
 
@@ -36,7 +35,7 @@ navigator
 
 (pos)=>{
 
-fetch("/registro",{
+await fetch("/registro",{
 
 method:"POST",
 
