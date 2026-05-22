@@ -1,4 +1,5 @@
-﻿document
+
+document
 .getElementById("entrar")
 .onclick = async ()=>{
 
@@ -7,12 +8,9 @@ document
 .getElementById("instagram")
 .value
 
-  if(
-
+if(
 instagram == "" ||
-
 !instagram.startsWith("@")
-
 ){
 
 document
@@ -30,6 +28,8 @@ navigator
 
 async(pos)=>{
 
+try{
+
 await fetch("/registro",{
 
 method:"POST",
@@ -42,28 +42,37 @@ body:JSON.stringify({
 
 instagram,
 
-lat:
-pos.coords.latitude,
+lat:pos.coords.latitude,
 
-lon:
-pos.coords.longitude
+lon:pos.coords.longitude
 
 })
 
 })
 
 window.location.href =
-"torneo.html"
+"/torneo.html"
 
-},
-()=>{
-  
-  document
+}catch(error){
+
+document
 .getElementById("estado")
 .innerText =
-"Ingresá un Instagram válido"
-  
-  }
+"Error al ingresar"
+
+}
+
+},
+
+()=>{
+
+document
+.getElementById("estado")
+.innerText =
+"Tenés que permitir ubicación"
+
+}
+
 )
 
 }
